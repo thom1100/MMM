@@ -81,3 +81,7 @@ def create_final_df(col:str):
 
     final_df = pd.concat([controls_target_variables, df_impressions, df_engagement, df_grp], axis = 1)
     return final_df
+
+if __name__ == "__main__":
+    final_df = create_final_df("growth_driver_l5")
+    final_df.to_csv("../data/transformed/df_l5.csv")
